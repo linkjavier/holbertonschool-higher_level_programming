@@ -5,5 +5,6 @@ def square_matrix_simple(matrix=[]):
         new.append(list(map(modpow, matrix[i])))
     return (new)
 
+
 def modpow(x):
     return (x ** 2)

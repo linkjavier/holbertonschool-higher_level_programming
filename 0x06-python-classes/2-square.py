@@ -4,7 +4,7 @@
 
 class Square:
     """Square Class"""
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Initialize the object with size value"""
         self.__size = size
         if type(size) is not int:

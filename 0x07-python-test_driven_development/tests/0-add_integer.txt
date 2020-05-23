@@ -1,0 +1,45 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(0,5)
+5
+
+>>> add_integer(0)
+98
+
+>>> add_integer(0,0)
+0
+
+>>> add_integer(0,)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(12345674646465678634653458,12345677365723478563476524756932465934)
+12345677365735824238122990435567119392
+
+>>> add_integer(9,9)
+18
+
+>>> add_integer(0,-1)
+-1
+
+>>> add_integer(12.4,-1)
+11
+
+>>> add_integer(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/linkjavier/Holberton/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 14, in add_integer
+    raise TypeError('a must be an integer')
+TypeError: a must be an integer

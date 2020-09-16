@@ -1,7 +1,11 @@
 #!/usr/bin/node
-/* Script that prints a message depending of the number of arguments passed */
-if (process.argv.length === 2) {
-  console.log('No argument');
-} else {
-  console.log(process.argv[2]);
+/* Script that prints the first argument passed to it: */
+let i = 0;
+while (process.argv[i]) {
+  i++;
 }
+if (i === 2) {
+    console.log('No argument');
+  } else {
+    console.log(process.argv[2]);
+  }

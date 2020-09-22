@@ -1,7 +1,9 @@
 #!/usr/bin/node
-/*  Empty class Rectangle that defines a rectangle.
+/*  Class Square that defines a square and inherits
+    from Rectangle of 4-rectangle.js
+    charPrint(c): Prints the rectangle using the character c
 */
-module.exports = class Square extends require('./4-rectangle.js') {
+module.exports = class Square extends require('./5-square.js') {
   constructor (size) {
     super(size, size);
   }

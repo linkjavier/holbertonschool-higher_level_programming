@@ -9,7 +9,7 @@ const fs = require('fs');
 
 request.get(url, function (err, response, body) {
   if (err == null) {
-    fs.writeFile(fileName, body, function (err) {
+    fs.writeFile(fileName, body, 'utf8', function (err) {
       if (err) throw err;
       console.log('Saved!');
     });

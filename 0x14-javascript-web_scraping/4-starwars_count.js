@@ -4,17 +4,16 @@
 */
 const request = require('request');
 
-request.get(`https://swapi-api.hbtn.io/api/films/`, function (err, response, body) {
+request.get('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
   if (err) {
     console.error(err);
   } else {
-    
-    const json = JSON.parse(body)
-    const results = json.results
-    let counter = 0
+    const json = JSON.parse(body);
+    const results = json.results;
+    let counter = 0;
     results.forEach(result => {
-        const filmsObject = result.characters
-            if (filmsObject.find(element => element === 'https://swapi-api.hbtn.io/api/people/18/')) counter++
+      const filmsObject = result.characters;
+      if (filmsObject.find(element => element === 'https://swapi-api.hbtn.io/api/people/18/')) counter++;
     });
     // FilmsCounter = 0
     // for (i = 0; i < FilmsSize; i++) {
@@ -23,7 +22,7 @@ request.get(`https://swapi-api.hbtn.io/api/films/`, function (err, response, bod
     //     FilmsCounter++
     //   }
     // }
-    
-    console.log(counter)
+
+    console.log(counter);
   }
 });

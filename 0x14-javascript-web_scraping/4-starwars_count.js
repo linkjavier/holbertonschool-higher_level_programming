@@ -3,8 +3,9 @@
     the episode number matches a given integer.
 */
 const request = require('request');
+const url = process.argv[2];
 
-request.get('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
+request.get(url, function (err, response, body) {
   if (err) {
     console.error(err);
   } else {

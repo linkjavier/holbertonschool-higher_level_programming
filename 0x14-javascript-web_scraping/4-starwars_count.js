@@ -6,9 +6,7 @@ const request = require('request');
 const url = process.argv[2];
 
 request.get(url, function (err, response, body) {
-  if (err) {
-    console.error(err);
-  } else {
+  if (err == null) {
     const json = JSON.parse(body);
     const results = json.results;
     let counter = 0;
